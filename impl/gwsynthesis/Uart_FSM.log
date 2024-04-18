@@ -1,0 +1,30 @@
+GowinSynthesis start
+Running parser ...
+Analyzing Verilog file 'C:\git programing projects\SysVerilog\Uart_FSM\src\fms_uart.sv'
+WARN  (EX2582) : Parameter 'FREQ' declared inside compilation unit '$unit_c__git_programing_projects_sysverilog_uart_fsm_src_fms_uart_sv' shall be treated as localparam("C:\git programing projects\SysVerilog\Uart_FSM\src\fms_uart.sv":1)
+WARN  (EX2582) : Parameter 'BAUD' declared inside compilation unit '$unit_c__git_programing_projects_sysverilog_uart_fsm_src_fms_uart_sv' shall be treated as localparam("C:\git programing projects\SysVerilog\Uart_FSM\src\fms_uart.sv":2)
+WARN  (EX2582) : Parameter 'CLKS' declared inside compilation unit '$unit_c__git_programing_projects_sysverilog_uart_fsm_src_fms_uart_sv' shall be treated as localparam("C:\git programing projects\SysVerilog\Uart_FSM\src\fms_uart.sv":3)
+Compiling module 'tx_uart'("C:\git programing projects\SysVerilog\Uart_FSM\src\fms_uart.sv":6)
+NOTE  (EX0101) : Current top module is "tx_uart"
+WARN  (EX0211) : The output port "tx" of module "tx_uart" has no driver, assigning undriven bits to Z, simulation mismatch possible("C:\git programing projects\SysVerilog\Uart_FSM\src\fms_uart.sv":6)
+[5%] Running netlist conversion ...
+WARN  (CV0016) : Input clk is unused("C:\git programing projects\SysVerilog\Uart_FSM\src\fms_uart.sv":6)
+WARN  (CV0016) : Input rst is unused("C:\git programing projects\SysVerilog\Uart_FSM\src\fms_uart.sv":6)
+Running device independent optimization ...
+[10%] Optimizing Phase 0 completed
+[15%] Optimizing Phase 1 completed
+[25%] Optimizing Phase 2 completed
+Running inference ...
+[30%] Inferring Phase 0 completed
+[40%] Inferring Phase 1 completed
+[50%] Inferring Phase 2 completed
+[55%] Inferring Phase 3 completed
+Running technical mapping ...
+[60%] Tech-Mapping Phase 0 completed
+[65%] Tech-Mapping Phase 1 completed
+[75%] Tech-Mapping Phase 2 completed
+[80%] Tech-Mapping Phase 3 completed
+[90%] Tech-Mapping Phase 4 completed
+[95%] Generate netlist file "C:\git programing projects\SysVerilog\Uart_FSM\impl\gwsynthesis\Uart_FSM.vg" completed
+[100%] Generate report file "C:\git programing projects\SysVerilog\Uart_FSM\impl\gwsynthesis\Uart_FSM_syn.rpt.html" completed
+GowinSynthesis finish

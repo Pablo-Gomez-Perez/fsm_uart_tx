@@ -1,0 +1,34 @@
+//
+//Written by GowinSynthesis
+//Tool Version "V1.9.9"
+//Thu Apr 18 02:51:58 2024
+
+//Source file index table:
+//file0 "\C:/git\ programing\ projects/SysVerilog/Uart_FSM/src/fms_uart.sv"
+`timescale 100 ps/100 ps
+module tx_uart (
+  clk,
+  rst,
+  tx
+)
+;
+input clk;
+input rst;
+output tx;
+wire VCC;
+wire GND;
+  TBUF tx_s0 (
+    .O(tx),
+    .I(GND),
+    .OEN(VCC) 
+);
+  VCC VCC_cZ (
+    .V(VCC)
+);
+  GND GND_cZ (
+    .G(GND)
+);
+  GSR GSR (
+    .GSRI(VCC) 
+);
+endmodule /* tx_uart */
