@@ -1,6 +1,8 @@
 Reading netlist file: "C:\git programing projects\SysVerilog\Uart_FSM\impl\gwsynthesis\Uart_FSM.vg"
 Parsing netlist file "C:\git programing projects\SysVerilog\Uart_FSM\impl\gwsynthesis\Uart_FSM.vg" completed
 Processing netlist completed
+Reading constraint file: "C:\git programing projects\SysVerilog\Uart_FSM\src\Uart_FSM.cst"
+Physical Constraint parsed completed
 Running placement......
 [10%] Placement Phase 0 completed
 [20%] Placement Phase 1 completed
@@ -23,5 +25,5 @@ Generate file "C:\git programing projects\SysVerilog\Uart_FSM\impl\pnr\Uart_FSM.
 Generate file "C:\git programing projects\SysVerilog\Uart_FSM\impl\pnr\Uart_FSM.rpt.html" completed
 Generate file "C:\git programing projects\SysVerilog\Uart_FSM\impl\pnr\Uart_FSM.rpt.txt" completed
 Generate file "C:\git programing projects\SysVerilog\Uart_FSM\impl\pnr\Uart_FSM.tr.html" completed
-Thu Apr 18 06:59:18 2024
+Thu Apr 18 08:12:43 2024
 

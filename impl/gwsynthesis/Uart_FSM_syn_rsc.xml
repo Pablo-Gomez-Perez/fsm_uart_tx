@@ -1,2 +1,4 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<Module name="tx_uart"/>
+<Module name="tx_uart" Register="17" Lut="34">
+    <SubModule name="gw_gao_inst_0" Register="126" Alu="23" Lut="113" Bsram="1"/>
+</Module>

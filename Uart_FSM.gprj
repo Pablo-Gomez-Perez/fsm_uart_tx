@@ -6,5 +6,7 @@
     <Device name="GW1NR-9C" pn="GW1NR-LV9QN88PC6/I5">gw1nr9c-004</Device>
     <FileList>
         <File path="src/fms_uart.sv" type="file.verilog" enable="1"/>
+        <File path="src/Uart_FSM.cst" type="file.cst" enable="1"/>
+        <File path="src/Uart_FSM.rao" type="file.gao" enable="1"/>
     </FileList>
 </Project>

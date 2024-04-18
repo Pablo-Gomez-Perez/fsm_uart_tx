@@ -1,7 +1,9 @@
 -d C:\git programing projects\SysVerilog\Uart_FSM\impl\gwsynthesis\Uart_FSM.vg
 -p GW1NR-9C-QFN88P-6
 -pn GW1NR-LV9QN88PC6/I5
+-cst C:\git programing projects\SysVerilog\Uart_FSM\src\Uart_FSM.cst
 -cfg C:\git programing projects\SysVerilog\Uart_FSM\impl\pnr\device.cfg
+-gao_crc 1001111110010111
 -bit
 -tr
 -ph
@@ -9,3 +11,4 @@
 -cst_error
 -correct_hold 1
 -route_maxfan 23
+-rtl_gao

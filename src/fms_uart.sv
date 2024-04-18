@@ -30,6 +30,7 @@ parameter CLKS = FREQ / BAUD; //Velocidad de transmisión del módulo
  */
 module tx_uart(input logic clk, rst, output logic tx);
 	
+	/*
 	parameter IDLE = 0;
 	parameter SEND = 1;
 	parameter start_bit = 0; 
@@ -37,6 +38,23 @@ module tx_uart(input logic clk, rst, output logic tx);
 	
 	logic [7:0] data = 8'h41;
 	logic [7:0] trama;
+	*/
+	
+	//Contador pulsito
+	logic [15:0] conta;
+	logic pulsito;
+	always_ff@(posedge clk, negedge rst)
+	if(!rst) conta <= 0;
+	else if(conta == 16'd3000)
+	begin
+		pulsito <= 1;
+		conta <= 0;
+	end
+	else
+	begin
+		pulsito <= 0;
+		conta <= conta + 1;
+	end	
+
 
 endmodule
-
