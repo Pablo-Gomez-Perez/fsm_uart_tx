@@ -1,15 +1,15 @@
 GowinSynthesis start
 Running parser ...
 Analyzing Verilog file 'C:\git programing projects\SysVerilog\Uart_FSM\src\fms_uart.sv'
-WARN  (EX2582) : Parameter 'FREQ' declared inside compilation unit '$unit_c__git_programing_projects_sysverilog_uart_fsm_src_fms_uart_sv' shall be treated as localparam("C:\git programing projects\SysVerilog\Uart_FSM\src\fms_uart.sv":1)
-WARN  (EX2582) : Parameter 'BAUD' declared inside compilation unit '$unit_c__git_programing_projects_sysverilog_uart_fsm_src_fms_uart_sv' shall be treated as localparam("C:\git programing projects\SysVerilog\Uart_FSM\src\fms_uart.sv":2)
-WARN  (EX2582) : Parameter 'CLKS' declared inside compilation unit '$unit_c__git_programing_projects_sysverilog_uart_fsm_src_fms_uart_sv' shall be treated as localparam("C:\git programing projects\SysVerilog\Uart_FSM\src\fms_uart.sv":3)
-Compiling module 'tx_uart'("C:\git programing projects\SysVerilog\Uart_FSM\src\fms_uart.sv":6)
+WARN  (EX2582) : Parameter 'FREQ' declared inside compilation unit '$unit_c__git_programing_projects_sysverilog_uart_fsm_src_fms_uart_sv' shall be treated as localparam("C:\git programing projects\SysVerilog\Uart_FSM\src\fms_uart.sv":20)
+WARN  (EX2582) : Parameter 'BAUD' declared inside compilation unit '$unit_c__git_programing_projects_sysverilog_uart_fsm_src_fms_uart_sv' shall be treated as localparam("C:\git programing projects\SysVerilog\Uart_FSM\src\fms_uart.sv":21)
+WARN  (EX2582) : Parameter 'CLKS' declared inside compilation unit '$unit_c__git_programing_projects_sysverilog_uart_fsm_src_fms_uart_sv' shall be treated as localparam("C:\git programing projects\SysVerilog\Uart_FSM\src\fms_uart.sv":22)
+Compiling module 'tx_uart'("C:\git programing projects\SysVerilog\Uart_FSM\src\fms_uart.sv":25)
 NOTE  (EX0101) : Current top module is "tx_uart"
-WARN  (EX0211) : The output port "tx" of module "tx_uart" has no driver, assigning undriven bits to Z, simulation mismatch possible("C:\git programing projects\SysVerilog\Uart_FSM\src\fms_uart.sv":6)
+WARN  (EX0211) : The output port "tx" of module "tx_uart" has no driver, assigning undriven bits to Z, simulation mismatch possible("C:\git programing projects\SysVerilog\Uart_FSM\src\fms_uart.sv":25)
 [5%] Running netlist conversion ...
-WARN  (CV0016) : Input clk is unused("C:\git programing projects\SysVerilog\Uart_FSM\src\fms_uart.sv":6)
-WARN  (CV0016) : Input rst is unused("C:\git programing projects\SysVerilog\Uart_FSM\src\fms_uart.sv":6)
+WARN  (CV0016) : Input clk is unused("C:\git programing projects\SysVerilog\Uart_FSM\src\fms_uart.sv":25)
+WARN  (CV0016) : Input rst is unused("C:\git programing projects\SysVerilog\Uart_FSM\src\fms_uart.sv":25)
 Running device independent optimization ...
 [10%] Optimizing Phase 0 completed
 [15%] Optimizing Phase 1 completed
