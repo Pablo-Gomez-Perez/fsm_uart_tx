@@ -24,7 +24,6 @@ parameter FREQ = 27000000; //Hz
 parameter BAUD = 115200; 
 parameter CLKS = FREQ / BAUD; //Velocidad de transmisión del módulo
 
-
 /**
  * Modulo Principal Top 
  */
@@ -39,10 +38,30 @@ module tx_uart(input logic clk, rst, output logic tx);
 	logic [7:0] data = 8'h41;
 	logic [7:0] trama;
 	*/
+	parameter IDLE = 0;
+	parameter SEND = 1;
+	parameter bit_de_inicio = 0;
+	parameter bit_de_parada = 1;
+
+	//Cables empleados para las conexiones
+	logic [15:0] conta; //para el contador
+	logic pulsito;		//para el generador de pulsos
+	logic [7:0] dato_tx = 8'h41;  //corresponde al caracter 'A' en ASCII
+	logic [9:0] trama;
+	logic estado = IDLE;
+	logic siguiente_estado = IDLE;
+	logic [15:0] conta_tx;
+	logic [3:0] conta_8;
 	
-	//Contador pulsito
-	logic [15:0] conta;
-	logic pulsito;
+	//reset
+	always_ff@(posedge clk, negedge rst)
+	if(!rst) estado <= IDLE;
+	else estado <= siguiente_estado;
+
+	//se asigna el valor de la salida tx
+	assign tx = (siguiente_estado == IDLE) ? 1'b1 : trama[0];
+	
+	//Generador de pulsos pulsito
 	always_ff@(posedge clk, negedge rst)
 	if(!rst) conta <= 0;
 	else if(conta == 16'd3000)
@@ -56,5 +75,51 @@ module tx_uart(input logic clk, rst, output logic tx);
 		conta <= conta + 1;
 	end	
 
+	//====================================
+	//se definen las configuraciones de los dos estados
+	always_ff@(posedge clk)
+	case(estado)
+	IDLE: 
+		if(pulsito)
+		begin
+			trama <= {1'b1,dato_tx,1'b0};
+			siguiente_estado <= SEND;
+		end
+		else siguiente_estado <= siguiente_estado;
+	SEND: 
+		if(conta_tx == CLKS && conta_8 == 4'd9)
+		begin
+			siguiente_estado <= IDLE;
+		end
+		else
+		begin
+			if(conta_tx == CLKS)
+			begin
+				siguiente_estado <= SEND;
+				trama <= {1'b1,trama[9:1]};
+			end
+			else trama <= trama;
+		end
+	endcase
+	
+	always_ff@(posedge clk)
+	if(estado == IDLE) conta_8 <= 0;
+	else
+	begin
+		if(conta_tx == CLKS)
+		begin
+			if(conta_8 == 4'd9) conta_8 <= 0;
+			else conta_8 <= conta_8 + 1;
+		end
+		else conta_8 <= conta_8;
+	end
+
+	//contador general hasta los 234
+	always_ff@(posedge clk)
+	if(estado == IDLE) conta_tx <= 0;
+	else if(conta_tx == CLKS) conta_tx <= 0;
+	else conta_tx <= conta_tx + 1;
 
 endmodule
+
+

@@ -1,4 +1,4 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<Module name="tx_uart" Register="17" Lut="34">
-    <SubModule name="gw_gao_inst_0" Register="126" Alu="23" Lut="113" Bsram="1"/>
+<Module name="tx_uart" Register="49" Alu="15" Lut="57">
+    <SubModule name="gw_gao_inst_0" Register="237" Lut="224" Bsram="10"/>
 </Module>

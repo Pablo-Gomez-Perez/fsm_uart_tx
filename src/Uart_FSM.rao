@@ -5,7 +5,52 @@
     <AoCore_Lite index="0" sample_clock="clk" trig_type="0" capture_amount="4096" implemention="0" input_register_enabled="0" capture_init_data_enabled="0" module_name="tx_uart">
         <SignalList>
             <Signal capture_enable="true">pulsito</Signal>
+            <Signal capture_enable="true">tx</Signal>
+            <Bus capture_enable="true" name="conta_tx[15:0]">
+                <Signal>conta_tx[15]</Signal>
+                <Signal>conta_tx[14]</Signal>
+                <Signal>conta_tx[13]</Signal>
+                <Signal>conta_tx[12]</Signal>
+                <Signal>conta_tx[11]</Signal>
+                <Signal>conta_tx[10]</Signal>
+                <Signal>conta_tx[9]</Signal>
+                <Signal>conta_tx[8]</Signal>
+                <Signal>conta_tx[7]</Signal>
+                <Signal>conta_tx[6]</Signal>
+                <Signal>conta_tx[5]</Signal>
+                <Signal>conta_tx[4]</Signal>
+                <Signal>conta_tx[3]</Signal>
+                <Signal>conta_tx[2]</Signal>
+                <Signal>conta_tx[1]</Signal>
+                <Signal>conta_tx[0]</Signal>
+            </Bus>
+            <Bus capture_enable="true" name="conta_8[3:0]">
+                <Signal>conta_8[3]</Signal>
+                <Signal>conta_8[2]</Signal>
+                <Signal>conta_8[1]</Signal>
+                <Signal>conta_8[0]</Signal>
+            </Bus>
+            <Signal capture_enable="true">estado</Signal>
+            <Signal capture_enable="true">siguiente_estado</Signal>
+            <Bus capture_enable="true" name="conta[15:0]">
+                <Signal>conta[15]</Signal>
+                <Signal>conta[14]</Signal>
+                <Signal>conta[13]</Signal>
+                <Signal>conta[12]</Signal>
+                <Signal>conta[11]</Signal>
+                <Signal>conta[10]</Signal>
+                <Signal>conta[9]</Signal>
+                <Signal>conta[8]</Signal>
+                <Signal>conta[7]</Signal>
+                <Signal>conta[6]</Signal>
+                <Signal>conta[5]</Signal>
+                <Signal>conta[4]</Signal>
+                <Signal>conta[3]</Signal>
+                <Signal>conta[2]</Signal>
+                <Signal>conta[1]</Signal>
+                <Signal>conta[0]</Signal>
+            </Bus>
         </SignalList>
     </AoCore_Lite>
-    <GAO_ID>1001111110010111</GAO_ID>
+    <GAO_ID>1101101011101110</GAO_ID>
 </GAO_CONFIG>

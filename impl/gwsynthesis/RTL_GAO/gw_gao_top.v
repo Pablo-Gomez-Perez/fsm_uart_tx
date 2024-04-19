@@ -1,5 +1,44 @@
 module gw_gao(
     pulsito,
+    tx,
+    \conta_tx[15] ,
+    \conta_tx[14] ,
+    \conta_tx[13] ,
+    \conta_tx[12] ,
+    \conta_tx[11] ,
+    \conta_tx[10] ,
+    \conta_tx[9] ,
+    \conta_tx[8] ,
+    \conta_tx[7] ,
+    \conta_tx[6] ,
+    \conta_tx[5] ,
+    \conta_tx[4] ,
+    \conta_tx[3] ,
+    \conta_tx[2] ,
+    \conta_tx[1] ,
+    \conta_tx[0] ,
+    \conta_8[3] ,
+    \conta_8[2] ,
+    \conta_8[1] ,
+    \conta_8[0] ,
+    estado,
+    siguiente_estado,
+    \conta[15] ,
+    \conta[14] ,
+    \conta[13] ,
+    \conta[12] ,
+    \conta[11] ,
+    \conta[10] ,
+    \conta[9] ,
+    \conta[8] ,
+    \conta[7] ,
+    \conta[6] ,
+    \conta[5] ,
+    \conta[4] ,
+    \conta[3] ,
+    \conta[2] ,
+    \conta[1] ,
+    \conta[0] ,
     clk,
     tms_pad_i,
     tck_pad_i,
@@ -8,6 +47,45 @@ module gw_gao(
 );
 
 input pulsito;
+input tx;
+input \conta_tx[15] ;
+input \conta_tx[14] ;
+input \conta_tx[13] ;
+input \conta_tx[12] ;
+input \conta_tx[11] ;
+input \conta_tx[10] ;
+input \conta_tx[9] ;
+input \conta_tx[8] ;
+input \conta_tx[7] ;
+input \conta_tx[6] ;
+input \conta_tx[5] ;
+input \conta_tx[4] ;
+input \conta_tx[3] ;
+input \conta_tx[2] ;
+input \conta_tx[1] ;
+input \conta_tx[0] ;
+input \conta_8[3] ;
+input \conta_8[2] ;
+input \conta_8[1] ;
+input \conta_8[0] ;
+input estado;
+input siguiente_estado;
+input \conta[15] ;
+input \conta[14] ;
+input \conta[13] ;
+input \conta[12] ;
+input \conta[11] ;
+input \conta[10] ;
+input \conta[9] ;
+input \conta[8] ;
+input \conta[7] ;
+input \conta[6] ;
+input \conta[5] ;
+input \conta[4] ;
+input \conta[3] ;
+input \conta[2] ;
+input \conta[1] ;
+input \conta[0] ;
 input clk;
 input tms_pad_i;
 input tck_pad_i;
@@ -15,6 +93,45 @@ input tdi_pad_i;
 output tdo_pad_o;
 
 wire pulsito;
+wire tx;
+wire \conta_tx[15] ;
+wire \conta_tx[14] ;
+wire \conta_tx[13] ;
+wire \conta_tx[12] ;
+wire \conta_tx[11] ;
+wire \conta_tx[10] ;
+wire \conta_tx[9] ;
+wire \conta_tx[8] ;
+wire \conta_tx[7] ;
+wire \conta_tx[6] ;
+wire \conta_tx[5] ;
+wire \conta_tx[4] ;
+wire \conta_tx[3] ;
+wire \conta_tx[2] ;
+wire \conta_tx[1] ;
+wire \conta_tx[0] ;
+wire \conta_8[3] ;
+wire \conta_8[2] ;
+wire \conta_8[1] ;
+wire \conta_8[0] ;
+wire estado;
+wire siguiente_estado;
+wire \conta[15] ;
+wire \conta[14] ;
+wire \conta[13] ;
+wire \conta[12] ;
+wire \conta[11] ;
+wire \conta[10] ;
+wire \conta[9] ;
+wire \conta[8] ;
+wire \conta[7] ;
+wire \conta[6] ;
+wire \conta[5] ;
+wire \conta[4] ;
+wire \conta[3] ;
+wire \conta[2] ;
+wire \conta[1] ;
+wire \conta[0] ;
 wire clk;
 wire tms_pad_i;
 wire tck_pad_i;
@@ -89,7 +206,7 @@ gw_con_top  u_icon_top(
 
 ao_top u_ao_top(
     .control(control0[9:0]),
-    .data_i(pulsito),
+    .data_i({pulsito,tx,\conta_tx[15] ,\conta_tx[14] ,\conta_tx[13] ,\conta_tx[12] ,\conta_tx[11] ,\conta_tx[10] ,\conta_tx[9] ,\conta_tx[8] ,\conta_tx[7] ,\conta_tx[6] ,\conta_tx[5] ,\conta_tx[4] ,\conta_tx[3] ,\conta_tx[2] ,\conta_tx[1] ,\conta_tx[0] ,\conta_8[3] ,\conta_8[2] ,\conta_8[1] ,\conta_8[0] ,estado,siguiente_estado,\conta[15] ,\conta[14] ,\conta[13] ,\conta[12] ,\conta[11] ,\conta[10] ,\conta[9] ,\conta[8] ,\conta[7] ,\conta[6] ,\conta[5] ,\conta[4] ,\conta[3] ,\conta[2] ,\conta[1] ,\conta[0] }),
     .clk_i(clk)
 );
 

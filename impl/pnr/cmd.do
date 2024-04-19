@@ -3,7 +3,7 @@
 -pn GW1NR-LV9QN88PC6/I5
 -cst C:\git programing projects\SysVerilog\Uart_FSM\src\Uart_FSM.cst
 -cfg C:\git programing projects\SysVerilog\Uart_FSM\impl\pnr\device.cfg
--gao_crc 1001111110010111
+-gao_crc 1101101011101110
 -bit
 -tr
 -ph

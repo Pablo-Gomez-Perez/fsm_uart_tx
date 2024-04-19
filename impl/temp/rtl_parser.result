@@ -1,10 +1,10 @@
 [
  {
   "InstFile" : "C:/git programing projects/SysVerilog/Uart_FSM/src/fms_uart.sv",
-  "InstLine" : 31,
+  "InstLine" : 30,
   "InstName" : "tx_uart",
   "ModuleFile" : "C:/git programing projects/SysVerilog/Uart_FSM/src/fms_uart.sv",
-  "ModuleLine" : 31,
+  "ModuleLine" : 30,
   "ModuleName" : "tx_uart"
  }
 ]
